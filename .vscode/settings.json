@@ -1,0 +1,6 @@
+{
+  "typescript.preferences.quoteStyle": "double",
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
+  "typescript.format.semicolons": "remove",
+
+}

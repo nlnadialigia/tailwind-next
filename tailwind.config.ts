@@ -24,6 +24,20 @@ const config: Config = {
       maxWidth: {
         app: '700px',
       },
+      animation: {
+        slideDown: 'slideDown 400ms cubic-bezier(0.16, 1, 0.3, 1)',
+        slideUp: 'slideUp 400ms linear',
+      },
+      keyframes: {
+        slideDown: {
+          from: { opacity: '0', transform: 'translateY(-2px)' },
+          to: { opacity: '1', transform: 'translateY(0)' },
+        },
+        slideUp: {
+          from: { opacity: '1' },
+          to: { opacity: '0' },
+        },
+      },
     },
   },
   plugins: [],

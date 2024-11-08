@@ -1,9 +1,12 @@
 import * as Input from '@/src/components/Input'
 import { Mail } from 'lucide-react'
 import { getCountries } from '../api/getCountries'
+import Editor from '../components/Form/Editor'
 import * as FileInput from '../components/Form/FileInput'
+import { Label } from '../components/Form/Label'
 import { Select } from '../components/Form/Select'
 import { SelectItem } from '../components/Form/Select/SelectItem'
+import { Textarea } from '../components/Form/Textarea'
 import { SettingsTabs } from '../components/SettingsTabs'
 import { timeZones } from '../utils/timezones'
 
@@ -46,12 +49,7 @@ export default async function Home() {
           className="mt-6 flex w-full flex-col gap-5 divide-y divide-zinc-200"
         >
           <div className="grid grid-cols-form gap-3">
-            <label
-              htmlFor="firstName"
-              className="text-sm font-medium text-zinc-700"
-            >
-              Name
-            </label>
+            <Label htmlFor="firstName" title="Name" />
             <div className="grid grid-cols-2 gap-6">
               <Input.Root>
                 <Input.Control
@@ -73,12 +71,7 @@ export default async function Home() {
           </div>
 
           <div className="grid grid-cols-form gap-3 pt-5">
-            <label
-              htmlFor="email"
-              className="text-sm font-medium text-zinc-700"
-            >
-              Email address
-            </label>
+            <Label htmlFor="email" title="Email address" />
             <Input.Root>
               <Input.Prefix>
                 <Mail className="h-5 w-5 text-zinc-500" />
@@ -93,15 +86,12 @@ export default async function Home() {
           </div>
 
           <div className="grid grid-cols-form gap-3 pt-5">
-            <label
-              htmlFor="photo"
-              className="text-sm font-medium text-zinc-700"
-            >
-              Your photo{' '}
+            <Label htmlFor="photo" title="Your photo">
               <span className="mt-0.5 block text-sm font-normal text-zinc-500">
+                {' '}
                 This will be displayed on your profile.
               </span>
-            </label>
+            </Label>
             <FileInput.Root className="flex items-start gap-5">
               <FileInput.ImagePreview />
               <FileInput.Trigger />
@@ -110,9 +100,7 @@ export default async function Home() {
           </div>
 
           <div className="grid grid-cols-form gap-3 pt-5">
-            <label htmlFor="role" className="text-sm font-medium text-zinc-700">
-              Role
-            </label>
+            <Label htmlFor="role" title="Role" />
             <Input.Root>
               <Input.Control
                 type="text"
@@ -124,12 +112,7 @@ export default async function Home() {
           </div>
 
           <div className="grid grid-cols-form gap-3 pt-5">
-            <label
-              htmlFor="country"
-              className="text-sm font-medium text-zinc-700"
-            >
-              Country
-            </label>
+            <Label htmlFor="country" title="Country" />
             <Select placeholder="Select a country">
               {countries.map((country) => (
                 <SelectItem
@@ -142,12 +125,7 @@ export default async function Home() {
           </div>
 
           <div className="grid grid-cols-form gap-3 pt-5">
-            <label
-              htmlFor="timezone"
-              className="text-sm font-medium text-zinc-700"
-            >
-              Timezone
-            </label>
+            <Label htmlFor="timezone" title="Timezone" />
             <Select placeholder="Select a timezone">
               {timeZones.map((zone) => (
                 <SelectItem
@@ -160,25 +138,28 @@ export default async function Home() {
           </div>
 
           <div className="grid grid-cols-form gap-3 pt-5">
-            <label htmlFor="bio" className="text-sm font-medium text-zinc-700">
-              Bio{' '}
+            <Label htmlFor="phone" title="Phone">
               <span className="mt-0.5 block text-sm font-normal text-zinc-500">
+                {' '}
                 Write a short introduction.
               </span>
-            </label>
-            <div>Bio</div>
+            </Label>
+            <div className="space-y-3">
+              <Editor />
+              <Textarea
+                id="bio"
+                defaultValue="I am a backend developer in Javascript, with knowledge of Python, mainly for data analysis. I consider myself a generalist, as I like to know everything, but I have dedicated my efforts to mainly improving my knowledge in backend, cloud architecture and cybersecurity."
+              />
+            </div>
           </div>
 
           <div className="grid grid-cols-form gap-3 pt-5">
-            <label
-              htmlFor="portfolio"
-              className="text-sm font-medium text-zinc-700"
-            >
-              Portfolio projects{' '}
+            <Label htmlFor="portfolio" title="Portfolio projects">
               <span className="mt-0.5 block text-sm font-normal text-zinc-500">
+                {' '}
                 Share a few snippets of your work.
               </span>
-            </label>
+            </Label>
             <div>
               <FileInput.Root>
                 <FileInput.Trigger />

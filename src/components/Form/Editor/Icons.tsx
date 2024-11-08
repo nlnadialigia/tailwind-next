@@ -9,7 +9,7 @@ export function EditorIcons() {
         <button
           key={Button.name}
           type="button"
-          className="rounded-md p-2 hover:bg-zinc-100"
+          className="rounded-md p-2 outline-none hover:bg-zinc-100 focus:border-violet-400 focus:ring-4 focus:ring-violet-100"
         >
           <Button className="h-4 w-4 text-zinc-500" strokeWidth={3} />
         </button>

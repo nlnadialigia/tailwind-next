@@ -1,10 +1,15 @@
 import * as Input from '@/src/components/Input'
 import { Mail } from 'lucide-react'
+import { getCountries } from '../api/getCountries'
 import * as FileInput from '../components/Form/FileInput'
 import { Select } from '../components/Form/Select'
+import { SelectItem } from '../components/Form/Select/SelectItem'
 import { SettingsTabs } from '../components/SettingsTabs'
+import { timeZones } from '../utils/timezones'
 
-export default function Home() {
+export default async function Home() {
+  const countries = await getCountries()
+
   return (
     <>
       <h1 className="text-3xl font-medium text-zinc-900">Settings</h1>
@@ -125,7 +130,15 @@ export default function Home() {
             >
               Country
             </label>
-            <Select />
+            <Select placeholder="Select a country">
+              {countries.map((country) => (
+                <SelectItem
+                  key={country.code}
+                  value={country.code}
+                  text={country.name}
+                />
+              ))}
+            </Select>
           </div>
 
           <div className="grid grid-cols-form gap-3 pt-5">
@@ -135,7 +148,15 @@ export default function Home() {
             >
               Timezone
             </label>
-            <div>Timezone</div>
+            <Select placeholder="Select a timezone">
+              {timeZones.map((zone) => (
+                <SelectItem
+                  key={zone.zoneName}
+                  value={zone.zoneName}
+                  text={zone.zoneName + ' ' + zone.offset}
+                />
+              ))}
+            </Select>
           </div>
 
           <div className="grid grid-cols-form gap-3 pt-5">

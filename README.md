@@ -69,6 +69,7 @@ $ pnpm run dev
 - [Radix UI](https://www.radix-ui.com/)
 - [Lucide Icons](https://lucide.dev/)
 - [Framer Motion](https://www.framer.com/motion/)
+- [Auto animate](https://auto-animate.formkit.com/)
 
 #### 🎲 Documentação
 

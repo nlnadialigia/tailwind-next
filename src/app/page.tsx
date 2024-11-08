@@ -21,7 +21,7 @@ export default async function Home() {
       <SettingsTabs />
 
       <div className="mt-6 flex flex-col">
-        <div className="flex items-center justify-between border-b border-zinc-200 pb-5">
+        <div className="flex flex-col justify-between gap-4 border-b border-zinc-200 pb-5 lg:flex-row lg:items-center">
           <div className="space-y-1">
             <h2 className="text-lg font-medium text-zinc-900">Personal Info</h2>
             <span className="text-sm text-zinc-500">
@@ -42,9 +42,9 @@ export default async function Home() {
           action=""
           className="mt-6 flex w-full flex-col gap-5 divide-y divide-zinc-200"
         >
-          <div className="grid grid-cols-form gap-3">
+          <div className="flex flex-col gap-3 lg:grid lg:grid-cols-form">
             <Label htmlFor="firstName" title="Name" />
-            <div className="grid grid-cols-2 gap-6">
+            <div className="flex flex-col gap-6 lg:grid lg:grid-cols-2">
               <Input.Root>
                 <Input.Control
                   type="text"
@@ -53,18 +53,25 @@ export default async function Home() {
                   defaultValue="Nadia"
                 />
               </Input.Root>
-              <Input.Root>
-                <Input.Control
-                  type="text"
-                  id="lastName"
-                  placeholder="Last name"
-                  defaultValue="Ligia"
+              <div className="flex flex-col gap-3 lg:block">
+                <Label
+                  htmlFor="lastName"
+                  title="Last name"
+                  className="lg:sr-only"
                 />
-              </Input.Root>
+                <Input.Root>
+                  <Input.Control
+                    type="text"
+                    id="lastName"
+                    placeholder="Last name"
+                    defaultValue="Ligia"
+                  />
+                </Input.Root>
+              </div>
             </div>
           </div>
 
-          <div className="grid grid-cols-form gap-3 pt-5">
+          <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form">
             <Label htmlFor="email" title="Email address" />
             <Input.Root>
               <Input.Prefix>
@@ -79,21 +86,21 @@ export default async function Home() {
             </Input.Root>
           </div>
 
-          <div className="grid grid-cols-form gap-3 pt-5">
+          <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form">
             <Label htmlFor="photo" title="Your photo">
               <span className="mt-0.5 block text-sm font-normal text-zinc-500">
                 {' '}
                 This will be displayed on your profile.
               </span>
             </Label>
-            <FileInput.Root className="flex items-start gap-5">
+            <FileInput.Root className="flex flex-col gap-5 lg:flex-row lg:items-start">
               <FileInput.ImagePreview />
               <FileInput.Trigger />
               <FileInput.Control />
             </FileInput.Root>
           </div>
 
-          <div className="grid grid-cols-form gap-3 pt-5">
+          <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form">
             <Label htmlFor="role" title="Role" />
             <Input.Root>
               <Input.Control
@@ -105,7 +112,7 @@ export default async function Home() {
             </Input.Root>
           </div>
 
-          <div className="grid grid-cols-form gap-3 pt-5">
+          <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form">
             <Label htmlFor="country" title="Country" />
             <Select placeholder="Select a country">
               {countries.map((country) => (
@@ -118,7 +125,7 @@ export default async function Home() {
             </Select>
           </div>
 
-          <div className="grid grid-cols-form gap-3 pt-5">
+          <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form">
             <Label htmlFor="timezone" title="Timezone" />
             <Select placeholder="Select a timezone">
               {timeZones.map((zone) => (
@@ -131,7 +138,7 @@ export default async function Home() {
             </Select>
           </div>
 
-          <div className="grid grid-cols-form gap-3 pt-5">
+          <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form">
             <Label htmlFor="phone" title="Phone">
               <span className="mt-0.5 block text-sm font-normal text-zinc-500">
                 {' '}
@@ -142,12 +149,12 @@ export default async function Home() {
               <Editor />
               <Textarea
                 id="bio"
-                defaultValue="I am a backend developer in Javascript, with knowledge of Python, mainly for data analysis. I consider myself a generalist, as I like to know everything, but I have dedicated my efforts to mainly improving my knowledge in backend, cloud architecture and cybersecurity."
+                defaultValue="I am a backend developer in Javascript, with knowledge of Python, mainly for data analysis."
               />
             </div>
           </div>
 
-          <div className="grid grid-cols-form gap-3 pt-5">
+          <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form">
             <Label htmlFor="portfolio" title="Portfolio projects">
               <span className="mt-0.5 block text-sm font-normal text-zinc-500">
                 {' '}
@@ -163,7 +170,7 @@ export default async function Home() {
             </div>
           </div>
 
-          <div className="flex items-center justify-end gap-2 pt-5">
+          <div className="flex items-center justify-start gap-2 pt-5 lg:justify-end">
             <Button variant="outline" type="button">
               Cancel
             </Button>

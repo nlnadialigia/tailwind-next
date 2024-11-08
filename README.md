@@ -70,6 +70,7 @@ $ pnpm run dev
 - [Lucide Icons](https://lucide.dev/)
 - [Framer Motion](https://www.framer.com/motion/)
 - [Auto animate](https://auto-animate.formkit.com/)
+- [Tailwind Variants](https://www.tailwind-variants.org/)
 
 #### 🎲 Documentação
 

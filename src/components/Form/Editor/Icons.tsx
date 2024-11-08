@@ -1,3 +1,5 @@
+'use client'
+
 import { Bold, Italic, Link, List, ListOrdered } from 'lucide-react'
 import { Button } from '../../Button'
 

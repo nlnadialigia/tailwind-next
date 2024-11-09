@@ -15,7 +15,7 @@ export function Label({
   return (
     <label
       htmlFor={htmlFor}
-      className="text-sm font-medium text-zinc-700"
+      className="text-sm font-medium text-zinc-700 dark:text-zinc-300"
       {...props}
     >
       {title}

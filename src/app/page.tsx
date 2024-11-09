@@ -16,15 +16,19 @@ export default async function Home() {
 
   return (
     <>
-      <h1 className="text-3xl font-medium text-zinc-900">Settings</h1>
+      <h1 className="text-3xl font-medium text-zinc-900 dark:text-zinc-100">
+        Settings
+      </h1>
 
       <SettingsTabs />
 
       <div className="mt-6 flex flex-col">
-        <div className="flex flex-col justify-between gap-4 border-b border-zinc-200 pb-5 lg:flex-row lg:items-center">
+        <div className="flex flex-col justify-between gap-4 border-b border-zinc-200 pb-5 lg:flex-row lg:items-center dark:border-zinc-700">
           <div className="space-y-1">
-            <h2 className="text-lg font-medium text-zinc-900">Personal Info</h2>
-            <span className="text-sm text-zinc-500">
+            <h2 className="text-lg font-medium text-zinc-900 dark:text-zinc-100">
+              Personal Info
+            </h2>
+            <span className="text-sm text-zinc-500 dark:text-zinc-400">
               Update your photo and personal details here.
             </span>
           </div>
@@ -40,7 +44,7 @@ export default async function Home() {
         <form
           id="settings"
           action=""
-          className="mt-6 flex w-full flex-col gap-5 divide-y divide-zinc-200"
+          className="mt-6 flex w-full flex-col gap-5 divide-y divide-zinc-200 dark:divide-zinc-700"
         >
           <div className="flex flex-col gap-3 lg:grid lg:grid-cols-form">
             <Label htmlFor="firstName" title="Name" />
@@ -75,7 +79,7 @@ export default async function Home() {
             <Label htmlFor="email" title="Email address" />
             <Input.Root>
               <Input.Prefix>
-                <Mail className="h-5 w-5 text-zinc-500" />
+                <Mail className="h-5 w-5 text-zinc-500 dark:text-zinc-400" />
               </Input.Prefix>
               <Input.Control
                 type="email"
@@ -88,7 +92,7 @@ export default async function Home() {
 
           <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form">
             <Label htmlFor="photo" title="Your photo">
-              <span className="mt-0.5 block text-sm font-normal text-zinc-500">
+              <span className="mt-0.5 block text-sm font-normal text-zinc-500 dark:text-zinc-400">
                 {' '}
                 This will be displayed on your profile.
               </span>
@@ -140,7 +144,7 @@ export default async function Home() {
 
           <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form">
             <Label htmlFor="phone" title="Phone">
-              <span className="mt-0.5 block text-sm font-normal text-zinc-500">
+              <span className="mt-0.5 block text-sm font-normal text-zinc-500 dark:text-zinc-400">
                 {' '}
                 Write a short introduction.
               </span>
@@ -156,7 +160,7 @@ export default async function Home() {
 
           <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form">
             <Label htmlFor="portfolio" title="Portfolio projects">
-              <span className="mt-0.5 block text-sm font-normal text-zinc-500">
+              <span className="mt-0.5 block text-sm font-normal text-zinc-500 dark:text-zinc-400">
                 {' '}
                 Share a few snippets of your work.
               </span>

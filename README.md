@@ -24,9 +24,8 @@ Projeto para aprofundamento nos fundamentos do Tailwind CSS através da criaçã
 
 APP desenvolvida no curso Masterizando o Tailwind - React, da [Rocketseat](https://www.rocketseat.com.br/).
 
-![Em construção](https://ik.imagekit.io/l7cwocexhc/crud-flask/em-contrucao.png?updatedAt=1706705289779)
-
-<!-- ![Demo]() -->
+![Web](https://ik.imagekit.io/l7cwocexhc/readme/web_pcCrbs2nk.png?updatedAt=1731115495902)
+![Mobile](https://ik.imagekit.io/l7cwocexhc/readme/mobile_C-4egX5V3.png?updatedAt=1731115521829)
 
 <br>
 
@@ -71,6 +70,7 @@ $ pnpm run dev
 - [Framer Motion](https://www.framer.com/motion/)
 - [Auto animate](https://auto-animate.formkit.com/)
 - [Tailwind Variants](https://www.tailwind-variants.org/)
+- [Tailwind Merge](https://github.com/dcastil/tailwind-merge)
 
 #### 🎲 Documentação
 
